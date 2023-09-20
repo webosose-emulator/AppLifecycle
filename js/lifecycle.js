@@ -2,7 +2,8 @@ document.addEventListener(
   "webOSLaunch",
   function (inData) {
     var launchElement = document.getElementById("launch");
-    launchElement.innerHTML = "<lg_red>App Launched</lg_red>";
+    console.log(JSON.stringify(inData.detail));
+    launchElement.innerHTML = "<lg_red>App Launched</lg_red>" + JSON.stringify(inData.detail);
   },
   true
 );
@@ -11,7 +12,8 @@ document.addEventListener(
   "webOSRelaunch",
   function (inData) {
     var launchElement = document.getElementById("reLaunch");
-    launchElement.innerHTML = "<lg_red>App Relaunched</lg_red>";
+    console.log(JSON.stringify(inData.detail));
+    launchElement.innerHTML = "<lg_red>App Relaunched</lg_red>" + JSON.stringify(inData.detail);
   },
   true
 );
